@@ -84,3 +84,16 @@
     margin: 0 0 10px 10px;
     width: 50%;
 }
+
+.add-story-form{
+    background-color:gainsboro;
+    display: flex ;
+    flex-direction: column;
+    width: 50%;
+}
+
+.add-story-form p {
+    display: flex;
+    flex-direction: column;
+    width: 90%
+}

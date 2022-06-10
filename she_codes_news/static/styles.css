@@ -11,9 +11,6 @@ header {
     border-bottom: 1px solid #000;
 }
 
-img {
-    filter: grayscale(100%);
-}
 
 h1 {
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -52,3 +49,5 @@ a {
 a, p {
     font-family: monospace;
 }
+
+/* Form styles will be added here! */
