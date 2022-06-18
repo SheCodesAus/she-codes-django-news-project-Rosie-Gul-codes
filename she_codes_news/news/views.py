@@ -17,12 +17,25 @@ class IndexView(generic.ListView):
         context['all_stories'] = NewsStory.objects.order_by('-pub_date').all()
         return context
 
-    def get_author_name(self, **kwargs):
+    # def get_author_name(self, **kwargs, pk): 
+    #     user = self.get_object(pk)
+    #     context = {}
+    #     context['latest_stories'] = NewsStory.objects.all().filter(author=user)[:4]
+    #     context['all_stories'] = NewsStory.objects.all().filter(author=user).all()
+    #     return context
+        
+
+    # def get_author_name(self, **kwargs):
         # context = super().get_auther_name(**kwargs)
-        context = {}
-        context['latest_stories'] = NewsStory.objects.all().filter('author=username')[:4]
-        context['all_stories'] = NewsStory.objects.all().filter('author=username').all()
-        return context
+        # context = {}
+        # context['latest_stories'] = NewsStory.objects.filter(author=username)[:4]
+        # context['all_stories'] = NewsStory.objects.all().filter('author=username').all()
+        # return context
+class NewsStoriesByAuthor(generic.ListView):
+    model = NewsStory
+    template_name = 'news/NewsStoriesByAuthor.html'
+# this class ismy attempt
+
 class StoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/story.html'

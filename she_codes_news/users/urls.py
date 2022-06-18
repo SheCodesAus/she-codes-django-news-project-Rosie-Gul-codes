@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CreateAccountView, AccountDetailsView
+from .views import AllUsersView, CreateAccountView, AccountDetailsView
 
 app_name = 'users'
 
@@ -8,5 +8,6 @@ urlpatterns = [
 name='createAccount'),
     path('account-details/', AccountDetailsView.as_view(),
 name='AccountInformation'),
+    path('list-of-authors/', AllUsersView.as_view(), name='FilterByAuthors'), 
 ]
 
